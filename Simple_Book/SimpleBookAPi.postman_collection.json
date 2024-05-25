@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "560226df-037f-4497-9b31-a1d30223e9a3",
+		"name": "SimpleBookAPi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34800403"
+	},
+	"item": [
+		{
+			"name": "CheckStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}/status",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListOfBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}/books",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DetailInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}/books/1",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clientName\": \"MdZobayerIbnaKabir\",\r\n   \"clientEmail\": \"MdZobayerIbnaKabir@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}/api-clients/",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"api-clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": 1,\r\n    \"customerName\": \"Rakib Islam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}/orders",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Url}}/orders/",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewExistingOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Url}}/orders/kpdBJ7NkKLJeThvUAs1sQ",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"orders",
+						"kpdBJ7NkKLJeThvUAs1sQ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePartialOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"Shakib Al Hasan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}/orders/kpdBJ7NkKLJeThvUAs1sQ",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"orders",
+						"kpdBJ7NkKLJeThvUAs1sQ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteExistingOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=6fd53d98350468b23dfd07945a8e1eba2580c5f15945bac3ffbbe3a013c7e6fc"
+					}
+				],
+				"url": {
+					"raw": "{{Url}}/orders/Le8ZPNq4Pvy90ELYP3EJn",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"orders",
+						"Le8ZPNq4Pvy90ELYP3EJn"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
