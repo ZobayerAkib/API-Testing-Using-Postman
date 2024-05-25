@@ -1,11 +1,10 @@
-
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0E93D2CD&center=true&vCenter=true&random=false&width=435&lines=API+Testing+Using+Postman" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&random=false&width=435&lines=API+Testing+Using+Postman" alt="Typing SVG" /></a>
 
 <div dir="auto">
 <p>
   I am engaged in comprehensive API testing for both a Book API and a Ticket System API using Postman. My testing process encompasses the following HTTP methods:
 
-<b>GET Requests:</b>
+<b style="font:italic ">GET Requests:</b>
 
 Retrieve data from the server to ensure the endpoints are returning the correct information as per the specified parameters.
 
